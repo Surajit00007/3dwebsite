@@ -21,9 +21,14 @@
                 <a data-aos="fade-down" data-aos-duration="3000" href="#skills">Skills</a>
                 <a data-aos="fade-down" data-aos-duration="3500" href="#contact">Contact</a>
                 <a data-aos="fade-down" data-aos-duration="4000" href="#resume">Resume</a>
-                <a data-aos="fade-down" data-aos-duration="4500" href="sociallinkedin.html">Social Links</a>
+                <a data-aos="fade-down" data-aos-duration="4500" href="#social">Social Links</a>
             </nav>
             <button data-aos="fade-down" data-aos-duration="1500" class="btn-signing">SIGN IN</button>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </header>
         <main>
             <div class="content">
@@ -37,11 +42,18 @@
                     <a href="#" class="btn-signing-main">Get Started &gt;</a>
                 </div>
             </div>
-            <spline-viewer
-                class="robot-3d"
-                url="https://prod.spline.design/your-model-url/scene.splinecode"
-                touch-action="none"
-            ></spline-viewer>
+            <div class="model-container">
+                <spline-viewer
+                    class="robot-3d"
+                    url="https://prod.spline.design/51646f8f-6ab8-4053-83fc-155b5d89a23f/scene.splinecode"
+                    touch-action="none"
+                    loading="lazy"
+                    aria-label="3D robot model"
+                ></spline-viewer>
+                <div class="model-fallback">
+                    <p>3D model loading...</p>
+                </div>
+            </div>
         </main>
     </div>
 
@@ -49,6 +61,14 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
+        
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+        document.querySelector('.robot-3d').addEventListener('error', function() {
+            document.querySelector('.model-fallback').style.display = 'flex';
+        });
     </script>
 </body>
 </html>
