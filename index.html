@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <img class="image-gradient" src="gradient.png" alt="Gradient background">
+    <div class="layer-blur"></div>
+
+    <div class="container">
+        <header>
+            <h1 data-aos="fade-down" data-aos-duration="1000" class="logo">SURAJIT SAHOO</h1>
+            <nav>
+                <a data-aos="fade-down" data-aos-duration="1500" href="#home">Home</a>
+                <a data-aos="fade-down" data-aos-duration="2000" href="#about">About</a>
+                <a data-aos="fade-down" data-aos-duration="2500" href="#projects">Projects</a>
+                <a data-aos="fade-down" data-aos-duration="3000" href="#skills">Skills</a>
+                <a data-aos="fade-down" data-aos-duration="3500" href="#contact">Contact</a>
+                <a data-aos="fade-down" data-aos-duration="4000" href="#resume">Resume</a>
+                <a data-aos="fade-down" data-aos-duration="4500" href="sociallinkedin.html">Social Links</a>
+            </nav>
+            <button data-aos="fade-down" data-aos-duration="1500" class="btn-signing">SIGN IN</button>
+        </header>
+        <main>
+            <div class="content">
+                <div class="tag-box">
+                    <div class="tag">INTRODUCING &mdash; </div>
+                </div>
+                <h1>EMAIL FOR<br>DEVELOPERS</h1>
+                <p class="description">I am a passionate developer with a keen interest in web development and design. I love creating beautiful and functional websites that provide a great user experience.</p>
+                <div class="buttons">
+                    <a href="#" class="btn-get-started">Documentation &gt;</a>
+                    <a href="#" class="btn-signing-main">Get Started &gt;</a>
+                </div>
+            </div>
+            <spline-viewer
+                class="robot-3d"
+                url="https://prod.spline.design/your-model-url/scene.splinecode"
+                touch-action="none"
+            ></spline-viewer>
+        </main>
+    </div>
+
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
